@@ -18,6 +18,7 @@ app.use(express.json({ limit: "256kb", strict: true }));
 // Do not trust X-Forwarded-For; the socket peer must be trusted.
 app.use((req, res, next) => {
   if (!isTrustedAddress(req.socket.remoteAddress, trustedNetworks)) {
+    console.log("NETWORK_NOT_TRUSTED:",req.socket.remoteAddress);
     return res.status(403).json({
       success: false,
       error: "NETWORK_NOT_TRUSTED",
