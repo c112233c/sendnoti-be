@@ -1,0 +1,19 @@
+{
+  "name": "sendnoti-be",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Internal notification gateway with project-specific formatting and output adapters",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --env-file=.env main.js",
+    "dev": "node --env-file=.env --watch main.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.6"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
